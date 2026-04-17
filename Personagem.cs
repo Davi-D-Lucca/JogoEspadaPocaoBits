@@ -15,10 +15,10 @@ namespace JogoEspadaPocaoBits
         {
             if(Defender == true)
             {
-                dano = dano / 2;
+                dano /= 2;
             }
 
-            Vida = Vida - dano;
+            Vida -= dano;
 
             if(Vida < 0)
             {
@@ -28,7 +28,7 @@ namespace JogoEspadaPocaoBits
 
         public void Curar(int valorCura)
         {
-            Vida = Vida + valorCura;
+            Vida += valorCura;
             if(Vida > 100)
             {
                 Vida = 100;
