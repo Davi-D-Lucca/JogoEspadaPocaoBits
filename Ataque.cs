@@ -14,16 +14,14 @@ namespace JogoEspadaPocaoBits
             Forte
         }
 
-        private Random random = new Random();
-
         public TipoAtaque Tipo { get; set; }
         public int DanoMin { get; set; }
         public int DanoMax { get; set; }
         public int ChanceAcerto { get; set; }
 
-        public int CalcularDano()
+        public int CalcularDano(Random random)
         {
-            int chance = random.Next(1, 1001);
+            int chance = random.Next(1, 101);
             if(chance <= ChanceAcerto)
             {
                 var dano = random.Next(DanoMin, DanoMax + 1);

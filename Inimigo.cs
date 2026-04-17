@@ -7,8 +7,7 @@ namespace JogoEspadaPocaoBits
 {
     class Inimigo : Personagem
     {
-        private Random random = new Random();
-        public int EscolherAcao()
+        public int EscolherAcao(Random random)
         {
             int acao = random.Next(1, 4);
             return acao;

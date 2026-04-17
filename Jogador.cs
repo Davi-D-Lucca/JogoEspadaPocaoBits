@@ -7,6 +7,7 @@ namespace JogoEspadaPocaoBits
 {
     class Jogador : Personagem
     {
+        
         public int Pocoes { get; set; }
 
         public void UsarPocao()
