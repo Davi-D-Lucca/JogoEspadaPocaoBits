@@ -87,7 +87,66 @@ namespace JogoEspadaPocaoBits
         }
         public void ExecutarTurno()
         {
-            throw new NotImplementedException();
+            Jogador.Defender = false;
+            Inimigo.Defender = false;
+
+            Ataque ataqueAtual;
+            int acaoJogador = Jogador.EscolherAcao();
+            int dano;
+
+            Inimigo inimigoAtual;
+            int acaoInimigo = Inimigo.EscolherAcao(this.Random);
+
+            switch (acaoJogador)
+            {
+                case 1:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Leve);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Inimigo.ReceberDano(dano);
+                    break;
+                case 2:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Medio);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Inimigo.ReceberDano(dano);
+                    break;
+                case 3:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Forte);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Inimigo.ReceberDano(dano);
+                    break;
+                case 4:
+                    Jogador.Defender = true;
+                    break;
+                case 5:
+                    Jogador.UsarPocao();
+                    break;
+            }
+
+            switch (acaoInimigo)
+            {
+                case 1:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Leve);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Jogador.ReceberDano(dano);
+                    break;
+                case 2:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Medio);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Jogador.ReceberDano(dano);
+                    break;
+                case 3:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Forte);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Jogador.ReceberDano(dano);
+                    break;
+                case 4:
+                    Inimigo.Defender = true;
+                    break;
+            }
+
+            Console.WriteLine($"Vida Jogador: {Jogador.Vida}");
+            Console.WriteLine($"Vida Inimigo: {Inimigo.Vida}");
+
         }
 
     }

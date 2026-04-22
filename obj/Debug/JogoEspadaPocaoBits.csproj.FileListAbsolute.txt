@@ -1,0 +1,2 @@
+C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\obj\Debug\JogoEspadaPocaoBits.csproj.AssemblyReference.cache
+C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\obj\Debug\JogoEspadaPocaoBits.csproj.CoreCompileInputs.cache
