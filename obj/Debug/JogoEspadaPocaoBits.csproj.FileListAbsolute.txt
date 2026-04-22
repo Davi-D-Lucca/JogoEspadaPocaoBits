@@ -1,2 +1,6 @@
 C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\obj\Debug\JogoEspadaPocaoBits.csproj.AssemblyReference.cache
 C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\obj\Debug\JogoEspadaPocaoBits.csproj.CoreCompileInputs.cache
+C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\bin\Debug\JogoEspadaPocaoBits.exe
+C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\bin\Debug\JogoEspadaPocaoBits.pdb
+C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\obj\Debug\JogoEspadaPocaoBits.exe
+C:\Users\davidlucca\source\repos\JogoEspadaPocaoBits\obj\Debug\JogoEspadaPocaoBits.pdb

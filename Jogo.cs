@@ -9,12 +9,18 @@ namespace JogoEspadaPocaoBits
     class Jogo
     {
         //Construtor
-        public Jogo(int rodada, Random random, Jogador jogador, Inimigo inimigo)
+        //public Jogo(int rodada, Random random, Jogador jogador, Inimigo inimigo)
+        //{
+        //    Rodada = rodada;
+        //    this.Random = random;
+        //    this.Jogador = jogador;
+        //    this.Inimigo = inimigo;
+        //}
+        public Jogo()
         {
-            Rodada = rodada;
-            this.Random = random;
-            this.Jogador = jogador;
-            this.Inimigo = inimigo;
+            Random = new Random();
+            Jogador = new Jogador();
+            Inimigo = new Inimigo();
         }
 
         public Jogador Jogador { get; set; }
@@ -121,27 +127,30 @@ namespace JogoEspadaPocaoBits
 
             if (!Inimigo.EstaVivo())
             {
-                switch (acaoInimigo)
-                {
-                    case 1:
-                        ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Leve);
-                        dano = ataqueAtual.CalcularDano(this.Random);
-                        Jogador.ReceberDano(dano);
-                        break;
-                    case 2:
-                        ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Medio);
-                        dano = ataqueAtual.CalcularDano(this.Random);
-                        Jogador.ReceberDano(dano);
-                        break;
-                    case 3:
-                        ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Forte);
-                        dano = ataqueAtual.CalcularDano(this.Random);
-                        Jogador.ReceberDano(dano);
-                        break;
-                    case 4:
-                        Inimigo.Defendendo = true;
-                        break;
-                }
+                Console.WriteLine($"Vida Inimigo: {Inimigo.Vida}");
+                return;
+            }
+
+            switch (acaoInimigo)
+            {
+                case 1:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Leve);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Jogador.ReceberDano(dano);
+                    break;
+                case 2:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Medio);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Jogador.ReceberDano(dano);
+                    break;
+                case 3:
+                    ataqueAtual = CriarAtaque(Ataque.TipoAtaque.Forte);
+                    dano = ataqueAtual.CalcularDano(this.Random);
+                    Jogador.ReceberDano(dano);
+                    break;
+                case 4:
+                    Inimigo.Defendendo = true;
+                    break;
             }
 
             Console.WriteLine($"Vida Jogador: {Jogador.Vida}");
