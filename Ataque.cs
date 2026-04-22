@@ -6,7 +6,16 @@ using System.Text;
 namespace JogoEspadaPocaoBits
 {
     class Ataque
-    {
+    { 
+        //Construtor
+        public Ataque(TipoAtaque tipo, int danoMin, int danoMax, int chanceAcerto)
+        {
+            Tipo = tipo;
+            DanoMin = danoMin;
+            DanoMax = danoMax;
+            ChanceAcerto = chanceAcerto;
+        }
+
         public enum TipoAtaque
         {
             Leve,
@@ -19,6 +28,7 @@ namespace JogoEspadaPocaoBits
         public int DanoMax { get; set; }
         public int ChanceAcerto { get; set; }
 
+        //Metodos
         public int CalcularDano(Random random)
         {
             int chance = random.Next(1, 101);

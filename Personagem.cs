@@ -11,6 +11,7 @@ namespace JogoEspadaPocaoBits
         public int Vida { get; set; }
         public bool Defender { get; set; }
 
+        //Metodos
         public void ReceberDano(int dano)
         {
             if(Defender == true)

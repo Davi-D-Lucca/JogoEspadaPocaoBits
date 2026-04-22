@@ -10,6 +10,7 @@ namespace JogoEspadaPocaoBits
         
         public int Pocoes { get; set; }
 
+        //Metodos
         public void UsarPocao()
         {
             if(Pocoes > 0)
