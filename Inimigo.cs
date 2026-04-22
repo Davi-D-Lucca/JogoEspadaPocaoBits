@@ -10,7 +10,7 @@ namespace JogoEspadaPocaoBits
         //Metodos
         public int EscolherAcao(Random random)
         {
-            int acao = random.Next(1, 4);
+            int acao = random.Next(1, 5);
             return acao;
         }
     }

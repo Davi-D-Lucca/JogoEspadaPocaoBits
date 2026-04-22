@@ -9,12 +9,12 @@ namespace JogoEspadaPocaoBits
     {
         public string Nome { get; set; }
         public int Vida { get; set; }
-        public bool Defender { get; set; }
+        public bool Defendendo { get; set; }
 
         //Metodos
         public void ReceberDano(int dano)
         {
-            if(Defender == true)
+            if(Defendendo == true)
             {
                 dano /= 2;
             }

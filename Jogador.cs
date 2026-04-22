@@ -33,7 +33,13 @@ namespace JogoEspadaPocaoBits
             Console.WriteLine("3 - Ataque Forte");
             Console.WriteLine("4 - Defender");
             Console.WriteLine("5 - Usar Poção");
-            int opcao = Convert.ToInt32(Console.ReadLine());
+
+            int opcao;
+            while (!int.TryParse(Console.ReadLine(), out opcao) || opcao < 1 || opcao > 5)
+            {
+                Console.WriteLine("Opção inválida, tente novamente:");
+            }
+
             return opcao;
         }
     }
