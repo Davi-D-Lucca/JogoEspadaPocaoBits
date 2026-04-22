@@ -10,32 +10,33 @@ namespace JogoEspadaPocaoBits
         public Jogo(int rodada, Random random, Jogador jogador, Inimigo inimigo)
         {
             Rodada = rodada;
-            this.random = random;
-            this.jogador = jogador;
-            this.inimigo = inimigo;
+            this.Random = random;
+            this.Jogador = jogador;
+            this.Inimigo = inimigo;
         }
 
-        public Jogador jogador { get; set; }
-        public Inimigo inimigo { get; set; }
+        public Jogador Jogador { get; set; }
+        public Inimigo Inimigo { get; set; }
         public int Rodada { get; set; }
-        public Random random { get; set; }
+        public Random Random { get; set; }
 
         public void Iniciar()
         {
-            jogador.Nome = "Heroi";
-            jogador.Vida = 100;
-            jogador.Pocoes = 3;
+            Jogador.Nome = "Heroi";
+            Jogador.Vida = 100;
+            Jogador.Pocoes = 3;
 
-            inimigo.Nome = "Monstro";
-            inimigo.Vida = 100;
+            Inimigo.Nome = "Monstro";
+            Inimigo.Vida = 100;
 
             Rodada = 1;
 
-            while(jogador.EstaVivo() && inimigo.EstaVivo())
+            while(Jogador.EstaVivo() && Inimigo.EstaVivo())
             {
                 Console.WriteLine($"Rodada: {Rodada}");
                 ExecutarTurno();
-                Rodada = Rodada + 1;
+                Rodada++;
+                //Rodada = Rodada + 1;
             }
             VerificarVencedor();
         }

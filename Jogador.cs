@@ -15,7 +15,8 @@ namespace JogoEspadaPocaoBits
             if(Pocoes > 0)
             {
                 Curar(20);
-                Pocoes = Pocoes - 1;
+                //Pocoes = Pocoes - 1;
+                Pocoes--;
                 Console.WriteLine("Poção utilizada com sucesso");
             }
             else
